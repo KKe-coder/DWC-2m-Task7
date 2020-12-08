@@ -21,8 +21,19 @@ class User < ApplicationRecord
   validates :name, length: { minimum: 2, maximum: 20 }, uniqueness: true
   validates :introduction, length: { maximum: 50 }
 
-    def followed_by?(user)
-      pas_followed.find_by(follower_id: user.id).present?
-    end
+  #include JpPrefecture
+  #jp_prefecture :prefecture_code
+
+  def prefecture_name
+    JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
+  end
+
+  def prefecture_name=(prefecture_name)
+    self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
+  end
+
+  def followed_by?(user)
+    pas_followed.find_by(follower_id: user.id).present?
+  end
 
 end

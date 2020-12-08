@@ -19015,30 +19015,3 @@ Processing by BooksController#show as HTML
 Completed 200 OK in 88ms (Views: 83.2ms | ActiveRecord: 1.0ms)
 
 
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:9
-Migrating to AddPostalCodeToUsers (20201208083227)
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ bin/rails:9
-  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "users" ADD "postcode" integer[0m
-  ↳ db/migrate/20201208083227_add_postal_code_to_users.rb:3
-  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "prefecture_code" integer[0m
-  ↳ db/migrate/20201208083227_add_postal_code_to_users.rb:4
-  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "address_city" varchar[0m
-  ↳ db/migrate/20201208083227_add_postal_code_to_users.rb:5
-  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "address_street" varchar[0m
-  ↳ db/migrate/20201208083227_add_postal_code_to_users.rb:6
-  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "address_building" varchar[0m
-  ↳ db/migrate/20201208083227_add_postal_code_to_users.rb:7
-  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201208083227"]]
-  ↳ bin/rails:9
-  [1m[35m (38.5ms)[0m  [1m[36mcommit transaction[0m
-  ↳ bin/rails:9
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  ↳ bin/rails:9
-  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
-  ↳ bin/rails:9
-  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
-  ↳ bin/rails:9
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ bin/rails:9

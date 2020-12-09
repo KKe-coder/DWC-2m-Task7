@@ -292,6 +292,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   coffee-rails (~> 4.2)
   devise
+  execjs
   factory_bot_rails
   faker
   font-awesome-sass (~> 5.13)

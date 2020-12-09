@@ -21,8 +21,8 @@ class User < ApplicationRecord
   validates :name, length: { minimum: 2, maximum: 20 }, uniqueness: true
   validates :introduction, length: { maximum: 50 }
 
-  #include JpPrefecture
-  #jp_prefecture :prefecture_code
+  include JpPrefecture
+  jp_prefecture :prefecture_code
 
   def prefecture_name
     JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
